@@ -20,25 +20,25 @@ public class Program {
 
         while (true) {
             try {
-                UI.clearScreen();
+            UI.clearScreen();
 
-                UI.printMatch(chessMatch, captured);
-                System.out.println();
-                System.out.print("Source: ");
-                ChessPosition source = UI.readChessPosition(sc);
+            UI.printMatch(chessMatch, captured);
+            System.out.println();
+            System.out.print("Source: ");
+            ChessPosition source = UI.readChessPosition(sc);
 
-                boolean[][] possibleMoves = chessMatch.possibleMoves(source);
-                UI.clearScreen();
-                UI.printBoard(chessMatch.getPieces(), possibleMoves);
-                System.out.println();
-                System.out.print("Target: ");
-                ChessPosition target = UI.readChessPosition(sc);
+            boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+            UI.clearScreen();
+            UI.printBoard(chessMatch.getPieces(), possibleMoves);
+            System.out.println();
+            System.out.print("Target: ");
+            ChessPosition target = UI.readChessPosition(sc);
 
-                ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
+            ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 
-                if (captured != null) {
-                    captured.add(capturedPiece);
-                }
+            if (captured != null) {
+                captured.add(capturedPiece);
+            }
 
             } catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
