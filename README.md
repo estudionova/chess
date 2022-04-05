@@ -9,6 +9,7 @@ Desenvolvimento jogo de xadrez para consolidação dos conhecimentos básicos de
 - Herança
 - Polimorfismo
 - Sobrecarga
+- Exceções
 
 - esse projeto inicial faz parte do curso completo de Nelio Alves (https://www.udemy.com/course/java-curso-completo/)
 - Repositorio do projeto Original  (https://github.com/acenelio/chess-system-java)
